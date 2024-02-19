@@ -1,0 +1,125 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 10px 0;
+}
+.subheading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.fileInputLabel {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileInputLabel::before {
+  content: "Choose Files";
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fileInputLabel:hover::before {
+  background-color: #0056b3;
+}
+
+.player-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+.playlist {
+  margin-top: 50px;
+  flex: 1;
+}
+
+.playlist h2 {
+  margin-bottom: 10px;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist li {
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+  margin: auto;
+}
+
+.playlist li.active {
+  color: black;
+  background-color: #f0f0f0;
+}
+
+.now-playing {
+  flex: 1;
+  text-align: left;
+  margin: 50px 0 0 20px;
+}
+
+.now-playing h2 {
+  margin-bottom: 10px;
+}
+
+.now-playing p {
+  margin: 10px 0;
+  font-size: 1rem;
+color:white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .player-container {
+    flex-direction: column;
+  }
+
+  .playlist {
+    width: 100%;
+  }
+  .now-playing{
+    width: 100%;
+    text-align: center;
+  }
+  .now-playing p{
+    margin: auto;
+
+  }
+}
